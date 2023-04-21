@@ -36,6 +36,7 @@ class CustomUser(AbstractUser):
     date_joined = models.DateTimeField(auto_now_add=True)
 
     # TODO: can_host flag to be added
+    can_host = models.BooleanField(default=False)
 
     object = CustomUserManager()
 

@@ -10,14 +10,15 @@ SUBMISSION_TYPES = (
 
 User = get_user_model()
 
+
 class Hackathon(models.Model):
     host = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     description = models.TextField()
     background_image = models.ImageField(
-        upload_to='images/background_image/', blank=True, null=True)
+        upload_to='hackathons/images/background_image/', blank=True, null=True)
     hackathon_image = models.ImageField(
-        upload_to='images/hackathon_image/', blank=True, null=True)
+        upload_to='hackathons/images/hackathon_image/', blank=True, null=True)
     submission_type = models.CharField(
         max_length=20, choices=SUBMISSION_TYPES)
     start_datetime = models.DateTimeField(blank=True, null=True)
@@ -29,8 +30,6 @@ class Hackathon(models.Model):
 
     def __str__(self):
         return self.title
-
-
 
 
 class Enrollment(models.Model):

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
-    'generic_relations',
+    'drf_yasg',
 
     'users',
     'hackathons',

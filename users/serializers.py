@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
             }
         }
         fields = ('id', 'full_name', 'email',
-                  'password', 'password2', 'date_joined')
+                  'password', 'password2', 'date_joined', 'can_host')
 
     def create(self, validated_data):
         password = validated_data.pop('password', None)
